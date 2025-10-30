@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beryl Blue Studio - Product Detail</title>
+    <link rel="stylesheet" href="Productdetail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <img src="search icon.svg" width="100" height="100" >
+                </div>
+                <img class="logoimg" src="logo.svg">
+                <div>
+                     <p class="top-rightnavicon"><img src="Bag icon.svg" width="30" height="30">   <img src="Profile icon.svg" width="30" height="30"></p>    
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <!-- NAVIGATION BAR -->
+            <nav class="nav-links">
+                <a href="Homepage.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Produtspage.html">ShopAll</a>
+                <a href="#">Albums</a>
+                <a href="#">Greeting Cards</a>
+                <a href="#">Bookmarks</a>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- MAIN SECTION -->
+        <section class="product-detail-grid">
+
+            <div class="detail-left">
+                <div class="product-images">
+                    <div class="small-image-gallery">
+                        <img src="p1.jpeg" class="small-image">
+                        <img src="p2.jpeg" class="small-image">
+                    </div>
+                    <img src="p3.jpeg" class="main-image">
+                </div>
+            </div>
+
+            <div class="detail-right">
+                <h2 class="product-title">TITLE OF PRODUCT</h2>
+                <p class="product-category">Greeting Card</p>
+                
+                <div class="product-price-line">
+                    <p class="product-price">Rs 200</p>
+                    <span class="sale-tag">ON SALE</span>
+                </div>
+                
+                <div class="qty-row">
+                    <p class="qty-label">Quantity</p>
+                    <div class="qty-selector flex-row justify-between">
+                            <button>-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button>+</button>
+                        </div>
+                </div>
+
+                <button class="btn-add-to-cart">Add to Cart</button>
+                <button class="btn-customize-product" onclick="goToPage()">Customize this Product</button>
+                
+                <!-- EXPANDABLE DETAILS -->
+                <div class="expandable-section">
+                    
+                    <div class="expandable-item">
+                        <div class="expand-title" onclick="toggleAccordion(this)">
+                            Item Details
+                            <img src="arrow.svg" width="16" height="16" class="expand-icon">
+                        </div>
+                        <div class="expandable-content open">
+                            <p class="detail"><b>Product Type:</b> Birthday card</p>
+                            <p class="detail"><b>Assembly:</b> HANDMADE</p>
+                            <p class="detail"><b>Material:</b> Paper</p>
+                            <p class="detail"><b>Size:</b> Dimension: length: 7 cm / 2.7 inches</p>
+                        </div>
+                    </div>
+
+
+                    <div class="expandable-section">
+                        <div class="expand-title" onclick="toggleAccordion(this)">
+                            Delivery
+                            <img src="arrow.svg" width="16" height="16" class="expand-icon">
+                        </div>
+                        <div class="expandable-content">
+                            <p class="detail">Expect to get by 19-25 November</p>
+                            <p class="detail">Delivery Charge: Rs 200</p>
+                            <p class="detail">Dispatched from: Rawalpindi Pakistan</p>
+                        </div>
+                    </div>
+
+
+                    <div class="expandable-section">
+                        <div class="expand-title" onclick="toggleAccordion(this)">
+                            Return Policy
+                            <img src="arrow.svg" width="16" height="16" class="expand-icon">
+                        </div>
+                        <div class="expandable-content">
+                            <p class="detail"><b>Order Policy:</b> Customers have 24 hours to cancel the order made.</p>
+                            <p class="detail"><b>Refunds Policy:</b> Non refundable</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    
+        <section class="container">
+            <h2 class="section-title">You May Also Like</h2>
+          
+            <div class="grid-container products-grid">
+
+                <a href="Productdetail.html?id=1" class="product-item">
+                    <img src="p1.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Torquise Eid Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 300</p>    
+                </a>
+
+                <a href="Productdetail.html?id=2" class="product-item">
+                    <img src="p2.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Mushroom Tags Pack of 7</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 210</p>        
+                </a>
+
+                <a href="Productdetail.html?id=3" class="product-item">
+                    <img src="p3.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Chemistry Theme Birthday Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 300</p>
+                </a>
+
+                <a href="Productdetail.html?id=4" class="product-item">
+                    <img src="p4.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Purple Eid Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 300</p>
+                </a>
+
+                <a href="Productdetail.html?id=5" class="product-item">
+                    <img src="p5.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Mini Yellow Spring Album</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 600</p>
+                </a>
+
+                <a href="Productdetail.html?id=6" class="product-item">
+                    <img src="p6.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Watercolor strips Birthday Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 260</p>
+                </a>
+
+                <a href="Productdetail.html?id=7" class="product-item">
+                    <img src="p7.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Cherry Blossoms Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                    <p class="product-details price">Rs 300</p>            
+                </a>
+
+                <a href="Productdetail.html?id=8" class="product-item">
+                    <img src="p8.jpeg" class="product-image">
+                    <div class="product-details">
+                        <p>Lavender Greeting Card</p>
+                        <img src="Bag icon.svg" class="icon-bag">
+                    </div>
+                        <p class="product-details price">Rs 300</p>                
+                </a>
+            </div>
+
+        </section>
+</main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Shop</a>
+                
+                <a href="#">
+                    <img src="instagram icon.svg" width="20" height="20">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    <img src="Pinterest icon.svg" width="20" height="20">
+                    Pinterest
+                </a>
+            </div>
+            <div class="footer-logo">
+                <img src="logo.svg" width="507" height="107">
+                <p>Since 2021</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+
+        function goToPage(){
+            window.location.href = "customizepg1.html";
+        }
+       
+        // EXPANDABLE DETAIL JS
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.expand-icon svg');
+            
+           
+            content.classList.toggle('open');
+            
+            
+            if (content.classList.contains('open')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const openContent = document.querySelector('.expandable-content.open');
+            if (openContent) {
+                 const icon = openContent.previousElementSibling.querySelector('.expand-icon svg');
+                 icon.style.transform = 'rotate(180deg)';
+            }
+        });
+
+        // PRODUCT DETILS JS
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+
+
+        const products = {
+            1: {
+                title: "Torquise Eid Card",
+                price: "300",
+                image: "p1.jpeg",
+                category: "Greeting Card"
+            },
+            2: {
+                title: "Mushroo Theme Tags Pack of 7",
+                price: "210",
+                image: "p2.jpeg",
+                category: "Tags"
+            },
+            3: {
+                title: "Chemistry Theme Birthday Card",
+                price: "300",
+                image: "p3.jpeg",
+                category: "Greeting Card"
+            },
+            4: {
+                title: "Purple Eid Card",
+                price: "300",
+                image: "p4.jpeg",
+                category: "Greeting Card"
+            },
+            5: {
+                title: "Mini Yellow Spring Album",
+                price: "600",
+                image: "p5.jpeg",
+                category: "Albums"
+            },
+            6: {
+                title: "Watercolor srtips Birthday Card",
+                price: "260",
+                image: "p6.jpeg",
+                category: "Greeting Card"
+            },
+            7:{
+                title: "Cherry Blossoms Card",
+                price: "300",
+                image: "p7.jpeg",
+                category: "Greeting Card"
+            },
+            8: {
+                title: "Lavender Greeting Card",
+                price: "300",
+                image: "p8.jpeg",
+                category: "Greeting Card"
+            }
+        };
+
+
+        const product = products[productId];
+
+        if (product) {
+            document.querySelector('.product-title').textContent = product.title;
+            document.querySelector('.product-price').textContent = "Rs " + product.price;
+            document.querySelector('.product-category').textContent = product.category;
+            document.querySelector('.main-image').src = product.image;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const smallImages = document.querySelectorAll(".small-image");
+        const mainImage = document.querySelector(".main-image");
+
+        smallImages.forEach((simage) => {
+        simage.addEventListener("click", () => {
+            mainImage.src = simage.src;
+        });
+        });
+    });
+    </script>
+</body>
+</html>

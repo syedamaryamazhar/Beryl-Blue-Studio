@@ -1,0 +1,270 @@
+:root {
+        --Primary: #1A4359;
+        --Seondary: #A7C3C6;
+        --Basecolor: #DAE3E0;
+        --accent-1: #F5EBEC;
+        --accent-2: #E0D1D4 ;
+        --CTA: #D4A598;
+        --font-poppins: 'Poppins';  
+        --font-playfairdisplay: 'Playfair Display';
+        }
+
+        body {
+            font-family: var(--font-poppins);
+            color: black;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0px auto;
+            padding: 0 16px; 
+        }
+
+        .section-title {
+            font-family: var(--font-playfairdisplay);
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* HEADER AND NAVIGATION BAR */
+        .header {
+            padding-top: 30px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+         .logo{
+             width: 507;
+             height: 107;
+             align-self: center; 
+         }
+        .top-rightnavicon{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header-bottom {
+            background-color: var(--Seondary); 
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            padding-bottom: 16px;
+            padding-top: 16px;
+            overflow-x: auto;
+        }
+
+        .nav-links a {
+            font-family: var(--font-poppins);
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--Primary);
+        }
+
+
+        /* PAGE STYLE */
+        .customize-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .customize-subtitle {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            font-family: var(--font-poppins);
+            margin-bottom: 50px;
+            margin-top: 0px;
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 5%;
+            margin-bottom: 70px;
+        }
+
+
+        /* PROGRESS BAR STEPS*/
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            width: 900px;
+            height: 1px;
+            margin-left: 110px;
+            background-color: black;
+            top: 20%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%; 
+            position: relative;
+            font-family: var(--font-poppins);
+            font-size: 0.8rem;
+            color: black;
+            text-align: center;
+        }
+
+        .step-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--Basecolor);
+            border: none;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .step.active .step-dot {
+            background-color: var(--Primary);
+            border-color: var(--Primary);
+        }
+
+        .step.active {
+            color: var(--Primary);
+        }
+
+
+        .typesoforder{
+            font-family: var(--font-playfairdisplay);
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .order-options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px 80px;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* RADIO BUTTONS */
+        .radio-option {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-poppins);
+            font-size: 1rem;
+            color: black;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"] {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999;
+            border-radius: 50%;
+            margin-right: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: border-color 0.2s;
+            flex-shrink: 0;
+        }
+        
+        .radio-option input[type="radio"]:checked {
+            border-color: var(--Primary);
+        }
+
+        .radio-option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--Primary);
+        }
+
+        /* NEXT STEP BUTTON */
+        .btn-proceed {
+            display: block;
+            background-color: var(--Primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-playfairdisplay);
+            font-size: 1rem;
+            margin: 0 auto;
+            transition: background-color 0.2s;
+        }
+
+        .btn-proceed:hover {
+            background-color: var(--Seondary);
+        }
+    
+        /* FOOTER */
+        .footer {
+            background-color: var(--Basecolor);
+            padding: 64px 0;
+            margin-top: 64px;
+        }
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            font-size: 0.875rem;
+            color: var(--Primary);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-nav a:hover {
+            color: var(--Seondary);
+        }
+
+        .footer-logo {
+            text-align: center;
+            color: var(--Primary);
+        }
+
+        .footer-logo p {
+            font-size: 0.75rem;
+            color: var(--Primary);
+            margin-top: 0px;
+        }
