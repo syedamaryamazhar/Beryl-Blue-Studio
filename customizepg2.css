@@ -273,43 +273,17 @@
             margin-bottom: 20px;
         }
 
-        .summary-line {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 1rem;
+        .total-summary p{
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
         }
 
-        .summary-label {
-            color: #666;
+        .total-summary .total{
+        font-weight: 600;
+        font-size: 18px;
         }
 
-        .summary-value {
-            font-weight: 600;
-            color: var(--Primary);
-        }
-
-        .total-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #666;
-            padding-top: 15px;
-            margin-top: 15px;
-        }
-
-        .total-line .summary-label {
-            font-family: var(--font-poppins);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: black;
-        }
-
-        .total-line .summary-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--Primary);
-        }
 
         .btn-next-step {
             background-color: var(--Primary);

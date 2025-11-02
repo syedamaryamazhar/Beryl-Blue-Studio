@@ -16,9 +16,9 @@
                 <div>
                     <img src="search icon.svg" width="100" height="100" >
                 </div>
-                <img class="logoimg" src="logo.svg">
+                <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
                 <div>
-                     <p class="top-rightnavicon"><img src="Bag icon.svg" width="30" height="30">   <img src="Profile icon.svg" width="30" height="30"></p>    
+                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
                 </div>
             </div>
         </div>
@@ -43,9 +43,6 @@
 
 
             <div class="progress-container">
-                <div class="back-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-                </div>
 
                 <div class="progress-bar">
                     <div class="step">
@@ -125,27 +122,15 @@
                 <div class="total-summary">
                     <h3 class="summary-title">Order summary</h3>
                     
-                    <div class="summary-line">
-                        <span class="summary-label">Subtotal</span>
-                        <span class="summary-value">Rs 3300</span>
-                    </div>
-                    <div class="summary-line">
-                        <span class="summary-label">Discount</span>
-                        <span class="summary-value" style="color: var(--CTA);">-Rs 100</span>
-                    </div>
-                    <div class="summary-line">
-                        <span class="summary-label">Shipping fee</span>
-                        <span class="summary-value">Rs 300</span>
-                    </div>
-
-                    <div class="total-line">
-                        <span class="summary-label">Total</span>
-                        <span class="summary-value">Rs 3500</span>
-                    </div>
+                    <p class="p">Subtotal <span>Rs 3300</span></p>
+                    <p class="p">Discount <span>-Rs 100</span></p>
+                    <p class="p">Shipping Fee<span>Rs 300</span></p>
+                    <hr>
+                    <p class="total">Total Amount<span>Rs 3500</span></p>
                     
                     <p class="estimated-date">Estimated delivery date 5-8 Jan</p>
 
-                    <button class="btn-next-step" onclick="goToPage()">Proceed to payment</button>
+                    <button class="btn-next-step" onclick="goToPage2()">Proceed to payment</button>
                     
                     <p class="email-confirmation-text">You will receive an email after placing order</p>
                 </div>
@@ -157,14 +142,14 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-nav">
-                <a href="#">Contact</a>
-                <a href="#">About</a>
-                <a href="#">Shop</a>
-                <a href="#">
+                <a href="Contact.html" target="_blank">Contact</a>
+                <a href="About.html" target="_blank">About</a>
+                <a href="Produtspage.html" target="_blank">Shop</a>
+                <a href="https://www.instagram.com/berylbluestudio/" target="_blank">
                     <img src="instagram icon.svg" width="20" height="20">
                     Instagram
                 </a>
-                <a href="#">
+                <a href="https://www.pinterest.com/syeda_maryam_a/" target="_blank">
                     <img src="Pinterest icon.svg" width="20" height="20">
                     Pinterest
                 </a>
@@ -177,7 +162,8 @@
     </footer>
 
     <script>
-        function goToPage(){
+        
+        function goToPage2(){
             window.location.href = "dopayment.html";
         }
     </script>

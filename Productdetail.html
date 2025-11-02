@@ -17,9 +17,9 @@
                 <div>
                     <img src="search icon.svg" width="100" height="100" >
                 </div>
-                <img class="logoimg" src="logo.svg">
+                <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
                 <div>
-                     <p class="top-rightnavicon"><img src="Bag icon.svg" width="30" height="30">   <img src="Profile icon.svg" width="30" height="30"></p>    
+                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                         </div>
                 </div>
 
-                <button class="btn-add-to-cart">Add to Cart</button>
+                <button class="btn-add-to-cart" id="add-to-cart">Add to Cart</button>
                 <button class="btn-customize-product" onclick="goToPage()">Customize this Product</button>
                 
                 <!-- EXPANDABLE DETAILS -->
@@ -206,16 +206,14 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-nav">
-                <a href="#">Contact</a>
-                <a href="#">About</a>
-                <a href="#">Shop</a>
-                
-                <a href="#">
+                <a href="Contact.html" target="_blank">Contact</a>
+                <a href="About.html" target="_blank">About</a>
+                <a href="Produtspage.html" target="_blank">Shop</a>
+                <a href="https://www.instagram.com/berylbluestudio/" target="_blank">
                     <img src="instagram icon.svg" width="20" height="20">
                     Instagram
                 </a>
-
-                <a href="#">
+                <a href="https://www.pinterest.com/syeda_maryam_a/" target="_blank">
                     <img src="Pinterest icon.svg" width="20" height="20">
                     Pinterest
                 </a>
@@ -332,7 +330,16 @@
             mainImage.src = simage.src;
         });
         });
+
     });
+
+
+    const addToCartBtn = document.getElementById('add-to-cart');
+    addToCartBtn.onclick = function(){
+        addToCartBtn.textContent = "Added to Cart";
+        addToCartBtn.disable = true;
+    };
+
     </script>
 </body>
 </html>
