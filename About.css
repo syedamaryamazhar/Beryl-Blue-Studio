@@ -193,7 +193,7 @@ footer{
         line-height: 1.5;
     }
 
-    .origin , .timeline{
+    .origin, .timeline{
         flex-direction: column;
         text-align: center;
         margin: 40px 0;
