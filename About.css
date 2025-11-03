@@ -159,6 +159,26 @@ footer{
             margin-top: 0px;
         }
 
+
+@media(max-width:1024px){
+        .nav-links{
+            gap:40px;
+        }
+
+        .origin , .timeline{
+            gap: 25px;
+        }
+
+        .origin.image , .timeline.image{
+            height: 220px;
+        }
+
+        main{
+            width: 90%;
+        }
+        
+    }
+
 @media (max-width:768px){
     .header-top{
         flex-direction: column;
@@ -199,11 +219,11 @@ footer{
         margin: 40px 0;
     }
 
-    .origin.text, .timeline.text{
+    .origin .text, .timeline .text{
         width: 100%;
     }
 
-    .origin.image, .timeline.image{
+    .origin .image, .timeline .image{
         width: 100%;
         height: 200px;
         border-radius: 8px;
@@ -283,23 +303,6 @@ footer{
 }
 
 
-    @media(max-width:1024px){
-        .nav-links{
-            gap:40px;
-        }
-
-        .origin , .timeline{
-            gap: 25px;
-        }
-
-        .origin.image , .timeline.image{
-            height: 220px;
-        }
-
-        main{
-            width: 90%;
-        }
-        
-    }
+    
 
 
