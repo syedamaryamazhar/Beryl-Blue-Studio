@@ -199,17 +199,17 @@ footer{
         margin: 40px 0;
     }
 
-    .origin.text , .timeline.text{
+    .origin.text, .timeline.text{
         width: 100%;
     }
 
-    .origin.image , .timeline.image{
+    .origin.image, .timeline.image{
         width: 100%;
         height: 200px;
         border-radius: 8px;
     }
 
-    .origin h3 ,.timeline h3{
+    .origin h3,.timeline h3{
         font-size: 18px;
         margin-bottom: 8px;
     }
