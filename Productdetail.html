@@ -13,28 +13,23 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <div class="header-top">
-                <div>
-                    <img src="search icon.svg" width="100" height="100" >
-                </div>
+            <div class="top-header">
+                <img src="search icon.svg" width="100" height="100" >
                 <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
-                <div>
-                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
-                </div>
+                <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="container">
+
+        <div class="bottom-header">
                 <!-- NAVIGATION BAR -->
-            <nav class="nav-links">
-                <a href="Homepage.html">Home</a>
-                <a href="About.html">About</a>
-                <a href="Produtspage.html">ShopAll</a>
-                <a href="#">Albums</a>
-                <a href="#">Greeting Cards</a>
-                <a href="#">Bookmarks</a>
-            </nav>
-            </div>
+                <nav class="nav-links">
+                    <a href="Homepage.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Produtspage.html">ShopAll</a>
+                    <a href="#">Albums</a>
+                    <a href="#">Greeting Cards</a>
+                    <a href="#">Bookmarks</a>
+                </nav>
         </div>
     </header>
 
@@ -56,19 +51,18 @@
             <div class="detail-right">
                 <h2 class="product-title">TITLE OF PRODUCT</h2>
                 <p class="product-category">Greeting Card</p>
-                
-                <div class="product-price-line">
+
                     <p class="product-price">Rs 200</p>
                     <span class="sale-tag">ON SALE</span>
-                </div>
+
                 
                 <div class="qty-row">
-                    <p class="qty-label">Quantity</p>
-                    <div class="qty-selector flex-row justify-between">
+                    <p>Quantity</p>
+                    <div class="qty-selector">
                             <button>-</button>
                             <input type="number" value="1" min="1" max="10">
                             <button>+</button>
-                        </div>
+                    </div>
                 </div>
 
                 <button class="btn-add-to-cart" id="add-to-cart">Add to Cart</button>
@@ -77,7 +71,7 @@
                 <!-- EXPANDABLE DETAILS -->
                 <div class="expandable-section">
                     
-                    <div class="expandable-item">
+                    <div>
                         <div class="expand-title" onclick="toggleAccordion(this)">
                             Item Details
                             <img src="arrow.svg" width="16" height="16" class="expand-icon">
@@ -122,84 +116,84 @@
 
     
         <section class="container">
-            <h2 class="section-title">You May Also Like</h2>
-          
-            <div class="grid-container products-grid">
+        <h2 class="section-title">More Products</h2>
+        
+        <div class="products-grid">
+        
+            <a href="Productdetail.html?id=1" class="product-box">
+                <img src="p1.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Torquise Eid Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 300</p>    
+            </a>
 
-                <a href="Productdetail.html?id=1" class="product-item">
-                    <img src="p1.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Torquise Eid Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 300</p>    
-                </a>
+            <a href="Productdetail.html?id=2" class="product-box">
+                <img src="p2.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Mushroom Tags Pack of 7</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 210</p>        
+            </a>
 
-                <a href="Productdetail.html?id=2" class="product-item">
-                    <img src="p2.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Mushroom Tags Pack of 7</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 210</p>        
-                </a>
+            <a href="Productdetail.html?id=3" class="product-box">
+                <img src="p3.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Chemistry Theme Birthday Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 300</p>
+            </a>
 
-                <a href="Productdetail.html?id=3" class="product-item">
-                    <img src="p3.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Chemistry Theme Birthday Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 300</p>
-                </a>
+            <a href="Productdetail.html?id=4" class="product-box">
+                <img src="p4.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Purple Eid Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 300</p>
+            </a>
 
-                <a href="Productdetail.html?id=4" class="product-item">
-                    <img src="p4.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Purple Eid Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 300</p>
-                </a>
+            <a href="Productdetail.html?id=5" class="product-box">
+                <img src="p5.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Mini Yellow Spring Album</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 600</p>
+            </a>
 
-                <a href="Productdetail.html?id=5" class="product-item">
-                    <img src="p5.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Mini Yellow Spring Album</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 600</p>
-                </a>
+            <a href="Productdetail.html?id=6" class="product-box">
+                <img src="p6.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Watercolor strips Birthday Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                 <p class="price">Rs 260</p>
+            </a>
 
-                <a href="Productdetail.html?id=6" class="product-item">
-                    <img src="p6.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Watercolor strips Birthday Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 260</p>
-                </a>
+            <a href="Productdetail.html?id=7" class="product-box">
+                <img src="p7.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Cherry Blossoms Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                <p class="price">Rs 300</p>            
+            </a>
 
-                <a href="Productdetail.html?id=7" class="product-item">
-                    <img src="p7.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Cherry Blossoms Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                    <p class="product-details price">Rs 300</p>            
-                </a>
+            <a href="Productdetail.html?id=8" class="product-box">
+                <img src="p8.jpeg" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Lavender Greeting Card</p>
+                    <img src="Bag icon.svg" class="icon-bag">
+                </div>
+                    <p class="price">Rs 300</p>                
+            </a>
 
-                <a href="Productdetail.html?id=8" class="product-item">
-                    <img src="p8.jpeg" class="product-image">
-                    <div class="product-details">
-                        <p>Lavender Greeting Card</p>
-                        <img src="Bag icon.svg" class="icon-bag">
-                    </div>
-                        <p class="product-details price">Rs 300</p>                
-                </a>
-            </div>
-
-        </section>
+        </div>
+    </section>
 </main>
 
     <!-- FOOTER -->
@@ -333,12 +327,12 @@
 
     });
 
-
-    const addToCartBtn = document.getElementById('add-to-cart');
-    addToCartBtn.onclick = function(){
-        addToCartBtn.textContent = "Added to Cart";
-        addToCartBtn.disable = true;
-    };
+        // ADD TO CART BTN JS
+        const addToCartBtn = document.getElementById('add-to-cart');
+        addToCartBtn.onclick = function(){
+            addToCartBtn.textContent = "Added to Cart";
+            addToCartBtn.disable = true;
+        };
 
     </script>
 </body>

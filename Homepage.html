@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beryl Blue Studio - Simple CSS</title>
+    <title>Beryl Blue Studio</title>
     <link rel="stylesheet" href="Homepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,35 +12,29 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <div class="header-top">
-                <div>
-                    <img src="search icon.svg" width="100" height="100" >
-                </div>
+            <div class="top-header">
+                <img src="search icon.svg" width="100" height="100" class="search-icon">
                 <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
-                <div>
-                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
-                </div>
+                <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>  
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="container">
+
+        <div class="bottom-header">
                 <!-- NAVIGATION BAR -->
-            <nav class="nav-links">
-                <a href="Homepage.html">Home</a>
-                <a href="About.html">About</a>
-                <a href="Produtspage.html">ShopAll</a>
-                <a href="#">Albums</a>
-                <a href="#">Greeting Cards</a>
-                <a href="#">Bookmarks</a>
-            </nav>
-            </div>
+                <nav class="nav-links">
+                    <a href="Homepage.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Produtspage.html">ShopAll</a>
+                    <a href="#">Albums</a>
+                    <a href="#">Greeting Cards</a>
+                    <a href="#">Bookmarks</a>
+                </nav>
         </div>
     </header>
 
     <!-- HERO BANNER -->
     <section class="hero-section">
         <img src="herobanner.png" class="herobanner">
-        <div class="hero-overlay"></div> 
         
         <div class="hero-content"> 
             <button class="btn-customize" onclick="gotoPage2()">Customize Now</button>
@@ -50,7 +44,8 @@
     <section class="container">
         <h2 class="section-title">Featured Collections</h2>
         
-        <div class="grid-container collections-grid">
+        <div class="collection-grid">
+
             <div class="image-text">
                 <img src="cards.jpeg" class="image">
                 <p>Greeting Cards</p>
@@ -65,84 +60,85 @@
                 <img src="album2.jpeg" class="image">
                 <p>Albums</p>
             </div>
+            
         </div>
     </section>
 
     <section class="container">
         <h2 class="section-title">Featured Products</h2>
         
-        <div class="grid-container products-grid">
+        <div class="products-grid">
         
-            <a href="Productdetail.html?id=1" class="product-item">
+            <a href="Productdetail.html?id=1" class="product-box">
                 <img src="p1.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Torquise Eid Card</p>
+                    <p class="product-name">Torquise Eid Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 300</p>    
+                <p class="price">Rs 300</p>    
             </a>
 
-            <a href="Productdetail.html?id=2" class="product-item">
+            <a href="Productdetail.html?id=2" class="product-box">
                 <img src="p2.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Mushroom Tags Pack of 7</p>
+                    <p class="product-name">Mushroom Tags Pack of 7</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 210</p>        
+                <p class="price">Rs 210</p>        
             </a>
 
-            <a href="Productdetail.html?id=3" class="product-item">
+            <a href="Productdetail.html?id=3" class="product-box">
                 <img src="p3.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Chemistry Theme Birthday Card</p>
+                    <p class="product-name">Chemistry Theme Birthday Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 300</p>
+                <p class="price">Rs 300</p>
             </a>
 
-            <a href="Productdetail.html?id=4" class="product-item">
+            <a href="Productdetail.html?id=4" class="product-box">
                 <img src="p4.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Purple Eid Card</p>
+                    <p class="product-name">Purple Eid Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 300</p>
+                <p class="price">Rs 300</p>
             </a>
 
-            <a href="Productdetail.html?id=5" class="product-item">
+            <a href="Productdetail.html?id=5" class="product-box">
                 <img src="p5.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Mini Yellow Spring Album</p>
+                    <p class="product-name">Mini Yellow Spring Album</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 600</p>
+                <p class="price">Rs 600</p>
             </a>
 
-            <a href="Productdetail.html?id=6" class="product-item">
+            <a href="Productdetail.html?id=6" class="product-box">
                 <img src="p6.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Watercolor strips Birthday Card</p>
+                    <p class="product-name">Watercolor strips Birthday Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                 <p class="product-details price">Rs 260</p>
+                 <p class="price">Rs 260</p>
             </a>
 
-            <a href="Productdetail.html?id=7" class="product-item">
+            <a href="Productdetail.html?id=7" class="product-box">
                 <img src="p7.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Cherry Blossoms Card</p>
+                    <p class="product-name">Cherry Blossoms Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                <p class="product-details price">Rs 300</p>            
+                <p class="price">Rs 300</p>            
             </a>
 
-            <a href="Productdetail.html?id=8" class="product-item">
+            <a href="Productdetail.html?id=8" class="product-box">
                 <img src="p8.jpeg" class="product-image">
                 <div class="product-details">
-                    <p>Lavender Greeting Card</p>
+                    <p class="product-name">Lavender Greeting Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
                 </div>
-                    <p class="product-details price">Rs 300</p>                
+                    <p class="price">Rs 300</p>                
             </a>
 
         </div>
