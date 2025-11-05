@@ -191,24 +191,41 @@ footer{
     }
 
 @media (max-width:768px){
-    .header-top{
-        flex-direction: column;
+     .top-header {
         justify-content: center;
-        text-align: center;
-        gap: 10px;
+        align-items: center;
+        gap: 25px;
+        /* width: 100vw; */
     }
 
-    .logoimg{
-        max-width: 180px;
-        height: auto;
+    .search-icon{
+        width: 50px;
+        height: 50px;
     }
 
-    .nav-links{
+    .logoimg {
+        width: 150px;
+    }
+
+    .top-rightnavicon img {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+
+    .nav-links {
         flex-wrap: wrap;
-        gap: 20px;
-        padding: 12px 0;
-        font-size: 14px;
+        /* width: 100vw; */
+        gap: 15px;
+        font-size: 8px;
+        padding: 10px;
+        justify-content: center;
     }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
 
     main{
         width: 90%;
@@ -277,26 +294,26 @@ footer{
         margin: 0 auto;
     }
 
-    .footer{
-        padding: 40px 20px;
+   .footer-nav{
+        /* width: 100vw; */
+        gap: 15px;
+        margin-bottom: 0px;
     }
 
-    .footer-nav{
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+    .footer-nav a{
+        font-size: 8px;
     }
 
     .footer-logo img{
-        max-width: 200px;
-        height: auto;
+        width: 190px;
+        margin-bottom: 0px;
     }
-
+    
     .footer-logo p{
-        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
-   
-}
+    }
 
 @media(max-width:480px){
     body{
