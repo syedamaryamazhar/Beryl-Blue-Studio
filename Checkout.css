@@ -73,7 +73,7 @@ body{
             text-align: center;
         }
 
-        .progress{
+.progress{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,6 +386,18 @@ body{
 
 @media(max-width:480px){
     .nav-links a{
+        font-size: 9px;
+    }
+
+    .progress{
+        gap: 15px;
+    }
+
+    .line{
+        width: 40px;
+    }
+
+    .step p{
         font-size: 12px;
     }
 
