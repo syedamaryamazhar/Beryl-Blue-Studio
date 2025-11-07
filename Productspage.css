@@ -283,7 +283,6 @@
     }
 
     .nav-links {
-        flex-wrap: wrap;
         /* width: 100vw; */
         gap: 40px;
         padding: 10px;
@@ -373,7 +372,6 @@
     }
 
     .nav-links {
-        flex-wrap: wrap;
         /* width: 100vw; */
         gap: 15px;
         font-size: 8px;

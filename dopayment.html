@@ -12,17 +12,17 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <div class="header-top">
+            <div class="top-header">
                 <div>
-                    <img src="search icon.svg" width="100" height="100" >
+                    <img src="search icon.svg" width="100" height="100" class="search-icon">
                 </div>
                 <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
                 <div>
-                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
+                     <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a></p>    
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
+        <div class="bottom-header">
             <div class="container">
                 <!-- NAVIGATION BAR -->
             <nav class="nav-links">
@@ -71,17 +71,15 @@
                 
                     <div class="payment-form">
                         <h3 class="form-title">Payment Details</h3>
+                      
                         <form>
-                            <div class="form-group">
-                                <label for="name">Account Holder's Name</label>
-                                <input type="text" id="name" placeholder="Account Holder's Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Acount Number</label>
-                                <input type="tel" id="phone" placeholder="XXXX XXXX XXXX XXXX">
-                            </div>
+                            <label for="name">Account Holder's Name</label>
+                            <input type="text" id="name" placeholder="Account Holder's Name">
+                            
+                            <label for="phone">Acount Number</label>
+                            <input type="tel" id="phone" placeholder="XXXX XXXX XXXX XXXX">
                         </form>
+                    
                         <button class="btn-next-step" onclick="goToPage2()">Confirm Payment</button>
                         <p class="email-confirmation-text">You will receive an email after confirming payment</p>
                     </div>
