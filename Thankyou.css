@@ -25,26 +25,24 @@ body{
     padding:0 auto;
 }
 
-.header {
+ .header {
             padding-top: 30px;
         }
 
-        .header-top {
+        .top-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-         .logo{
-             width: 507;
-             height: 107;
-             align-self: center; 
-            }
         .top-rightnavicon{
             margin-right: 10px;
             cursor: pointer;
         }
-        .header-bottom {
+        .search-icon{
+            margin-left: 10px;
+        }
+        .bottom-header {
             background-color: #A7C3C6; 
         }
         .nav-links {
