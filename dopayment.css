@@ -436,3 +436,12 @@
     }
     }
 
+    @media (min-width: 993px){
+        .progress-bar::before {
+        width: 70vw;
+        margin-left: 82px;
+        top: 13%;
+        }
+
+    }
+

@@ -14,9 +14,9 @@
     <header class="header">
         <div class="container">
             <div class="top-header">
-                <img src="search icon.svg" width="100" height="100" >
+                <img src="search icon.svg" width="100" height="100" class="search-icon" >
                 <a href="Homepage.html" target="_blank"><img class="logoimg" src="logo.svg" ></a>
-                <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a>   <img src="Profile icon.svg" width="30" height="30"></p>    
+                <p class="top-rightnavicon"><a href="Cart.html"><img src="Bag icon.svg" width="30" height="30"></a></p>    
             </div>
         </div>
 
@@ -77,10 +77,11 @@
                             <img src="arrow.svg" width="16" height="16" class="expand-icon">
                         </div>
                         <div class="expandable-content open">
-                            <p class="detail"><b>Product Type:</b> Birthday card</p>
-                            <p class="detail"><b>Assembly:</b> HANDMADE</p>
-                            <p class="detail"><b>Material:</b> Paper</p>
-                            <p class="detail"><b>Size:</b> Dimension: length: 7 cm / 2.7 inches</p>
+                            <p class="Category"><b>Product Category: </b></p>
+                            <p class="Assembly"><b>Assembly:</b> HANDMADE</p>
+                            <p class="Type"><b>Type: </b></p>
+                            <p class="Material"><b>Material: </b></p>
+                            <p class="Size"><b>Size: </b></p>
                         </div>
                     </div>
 
@@ -259,49 +260,73 @@
                 title: "Torquise Eid Card",
                 price: "300",
                 image: "p1.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             },
             2: {
                 title: "Mushroo Theme Tags Pack of 7",
                 price: "210",
                 image: "p2.jpeg",
-                category: "Tags"
+                category: "Tags",
+                type: "Physical",
+                size: "3 inches x 4 inches",
+                material: "Hard chart and papers"
             },
             3: {
                 title: "Chemistry Theme Birthday Card",
                 price: "300",
                 image: "p3.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             },
             4: {
                 title: "Purple Eid Card",
                 price: "300",
                 image: "p4.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             },
             5: {
                 title: "Mini Yellow Spring Album",
                 price: "600",
                 image: "p5.jpeg",
-                category: "Albums"
+                category: "Albums",
+                type: "Physical",
+                size: "4 inches x 6 inches",
+                material: "Hard chart and pattern paper"
             },
             6: {
                 title: "Watercolor srtips Birthday Card",
                 price: "260",
                 image: "p6.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             },
             7:{
                 title: "Cherry Blossoms Card",
                 price: "300",
                 image: "p7.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             },
             8: {
                 title: "Lavender Greeting Card",
                 price: "300",
                 image: "p8.jpeg",
-                category: "Greeting Card"
+                category: "Greeting Card",
+                type: "Physical",
+                size: "6 inches x 12 inches",
+                material: "Hard chart"
             }
         };
 
@@ -313,6 +338,11 @@
             document.querySelector('.product-price').textContent = "Rs " + product.price;
             document.querySelector('.product-category').textContent = product.category;
             document.querySelector('.main-image').src = product.image;
+            document.querySelector('.Category').append(product.category);
+            document.querySelector('.Type').append(product.type);
+            document.querySelector('.Size').append(product.size);
+            document.querySelector('.Material').append(product.material);
+
         }
 
         document.addEventListener("DOMContentLoaded", function () {

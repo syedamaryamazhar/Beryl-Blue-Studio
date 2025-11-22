@@ -103,10 +103,7 @@
         .box-btn:hover {
             background-color: var(--Basecolor);
         }
-
-        .box-btn.active {
-            background-color: var(--Basecolor);
-        }
+        
 
         /* ALL PRODUCTS */
         .products-header {
@@ -129,6 +126,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            margin: 5px;
         }
         
         .product-box {

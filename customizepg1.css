@@ -342,7 +342,7 @@
     }
 
     /* MOBILE VIEW */
-    @media (max-width: 600px) {
+    @media (max-width: 600px){
 
     .section-title{
         font-size: 22px;
@@ -421,4 +421,13 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
+    }
+
+    @media (min-width: 993px){
+        .progress-bar::before {
+        width: 70vw;
+        margin-left: 82px;
+        top: 13%;
+        }
+
     }
