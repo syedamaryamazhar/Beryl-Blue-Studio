@@ -81,7 +81,7 @@
         </section>
 
         <div class="checkout">
-            <div class="payment">
+            <div class="payment" id="payment">
                 <h4>Payment Options</h4>
                 <label><input type="radio" name="payment" value="card">Credit/Debit card</label><br>
                 <label><input type="radio" name="payment" value="easypaisa">Easypaisa</label><br>
@@ -124,11 +124,54 @@
         </div>
     </footer>
 
-    <script>
-         function Page(){
-            window.location.href = "Thankyou.html";
-        }
-    </script>
+   <script>
+
+
+function loadSummary() {
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    var subtotal = 0;
+
+    for (var i = 0; i < cart.length; i++) {
+        subtotal += cart[i].price * cart[i].qty;
+    }
+
+    var shipping = 200; 
+    var discount = 0; 
+    var total = subtotal + shipping;
+
+    document.querySelector(".summary").innerHTML = `
+        <h4>Order Summary</h4>
+        <p>Subtotal <span>Rs ${subtotal}</span></p>
+        <p>Shipping Fee <span>Rs ${shipping}</span></p>
+        <hr>
+        <p class="total"> Total <span>Rs ${total}</span></p>
+        <p class="delivery-date">Estimate Delivery date <span>3-5 Jan</span></p>
+        <button class="place-order" onclick="Page()">Place Order</button>
+        <p class="note">You will receive an email after placing the order.</p>
+    `;
+}
+
+loadSummary();
+
+function Page() {
+    var name = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var address = document.getElementById("address").value.trim();
+    var payment = document.querySelector('input[name="payment"]:checked');
+
+    if (name === "" || phone === "" || email === "" || address === "" || payment === null) {
+        alert("Please fill all fields and select a payment method.");
+        return; 
+    }
+
+    window.location.href = "Thankyou.html";
+}
+
+
+
+</script>
+
 </body>
 </html>
 

@@ -61,80 +61,10 @@
     </p>
 
     <div class="cart-container">
-        <div class="left-side">
+<div class="left-side" id="cart-items">
 
-            <div class="top">
-                <label><input type="checkbox" id="selectAll">Select All</label>
-                <button class="deleteAll">Delete All</button>
-            </div>
+</div>
 
-            <div class="cart-item">
-                <div class="item-info">
-                    <div class="item-img">
-                        <img src="img1.jpg" class="image">
-                    </div>
-                    <div class="item-details">
-                        <p><strong>Product Detail</strong></p>
-                        <p>Color:Blue</p>
-                        <p>Type:Physical</p>
-                        <p><strong>Rs 1900</strong></p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <button class="minus">-</button>
-                    <input type="text" value="1">
-                    <button class="plus">+</button>
-
-                </div>
-                
-            </div>
-
-            <div class="cart-item">
-                <div class="item-info">
-                    <div class="item-img">
-                         <img src="img1.jpg" class="image">
-                    </div>
-                    <div class="item-details">
-                        <p><strong>Product Detail</strong></p>
-                        <p>Color:Blue</p>
-                        <p>Type:Physical</p>
-                        <p><strong>Rs 1900</strong></p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <button class="minus">-</button>
-                    <input type="text" value="1">
-                    <button class="plus">+</button>
-
-                </div>
-            </div>
-
-                <div class="cart-item">
-                <div class="item-info">
-                    <div class="item-img">
-                         <img src="img1.jpg" class="image">
-                    </div>
-                    <div class="item-details">
-                        <p><strong>Product Detail</strong></p>
-                        <p>Color:Blue</p>
-                        <p>Type:Physical</p>
-                        <p><strong>Rs 1900</strong></p>
-                    </div>
-                </div>
-               
-
-                <div class="box">
-                    <button class="minus">-</button>
-                    <input type="text" value="1">
-                    <button class="plus">+</button>
-
-                </div>
-                </div>
-            
-         
-            </div>
    
 
              <div class="right">
@@ -177,6 +107,119 @@
         </div>
     </footer>
 <script>
+
+
+    function loadCart() {
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+        var container = document.getElementById("cart-items");
+        container.innerHTML = ""; 
+
+        for (var i = 0; i < cart.length; i++) {
+
+            var item = cart[i];
+
+            var html = `
+            <div class="cart-item">
+                <div class="item-info">
+                    <div class="item-img">
+                        <img src="${item.image}" class="image">
+                    </div>
+                    <div class="item-details">
+                        <p><strong>${item.title}</strong></p>
+                        <p>Quantity: ${item.qty}</p>
+                        <p><strong>Rs ${item.price * item.qty}</strong></p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <button class="minus" onclick="decreaseQty('${item.id}')">-</button>
+                    <input type="text" value="${item.qty}" disabled>
+                    <button class="plus" onclick="increaseQty('${item.id}')">+</button>
+                </div>
+            </div>
+            `;
+
+            container.innerHTML += html;
+        }
+
+        calculateTotal();
+    }
+
+
+function increaseQty(id) {
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id === id) {
+            cart[i].qty++;
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+
+
+function decreaseQty(id) {
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id === id) {
+            if (cart[i].qty === 1) {
+                if (confirm("Remove this item from cart?")) {
+                    cart.splice(i, 1);
+                }
+            } else {
+                cart[i].qty--;
+            }
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+
+
+
+function deleteItem(id) {
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    var updatedCart = [];
+
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id !== id) {
+            updatedCart.push(cart[i]);
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    loadCart();
+}
+
+
+
+    function calculateTotal() {
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+        var subtotal = 0;
+
+        for (var i = 0; i < cart.length; i++) {
+            subtotal += cart[i].price * cart[i].qty;
+        }
+
+        document.querySelector(".order-detail").innerHTML = `
+            <p>Subtotal <span>Rs ${subtotal}</span></p>
+            <p>Shipping Fee <span>Rs 200</span></p>
+            <hr>
+            <p class="total">Total Amount <span>Rs ${subtotal + 200}</span></p>
+        `;
+    }
+
+    
+    loadCart();
+
+
      function Page(){
             window.location.href = "Checkout.html";
         }

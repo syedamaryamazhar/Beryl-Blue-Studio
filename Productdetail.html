@@ -220,150 +220,116 @@
         </div>
     </footer>
     
-    <script>
+<script>
 
-        function goToPage(){
-            window.location.href = "customizepg1.html";
+    
+    function goToPage() {
+        window.location.href = "customizepg1.html";
+    }
+
+
+    /// EXPANDABLE DETAIL JS
+    function toggleAccordion(header) {
+        var content = header.nextElementSibling;
+        var icon = header.querySelector(".expand-icon");
+
+        content.classList.toggle("open");
+
+        if (content.classList.contains("open")) {
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            icon.style.transform = "rotate(0deg)";
         }
-       
-        // EXPANDABLE DETAIL JS
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('.expand-icon svg');
-            
-           
-            content.classList.toggle('open');
-            
-            
-            if (content.classList.contains('open')) {
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                icon.style.transform = 'rotate(0deg)';
-            }
+    }
+
+
+
+    // PRODUCT DETILS JS
+    var params = new URLSearchParams(window.location.search);
+    var productId = params.get("id");
+
+    var products = {
+        1: { title: "Torquise Eid Card", price: "300", image: "p1.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        2: { title: "Mushroom Tags Pack of 7", price: "210", image: "p2.jpeg", category: "Tags", type: "Physical", size: "3 x 4", material: "Hard chart" },
+        3: { title: "Chemistry Theme Birthday Card", price: "300", image: "p3.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        4: { title: "Purple Eid Card", price: "300", image: "p4.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        5: { title: "Mini Yellow Spring Album", price: "600", image: "p5.jpeg", category: "Album", type: "Physical", size: "4 x 6", material: "Hard chart" },
+        6: { title: "Watercolor Strips Card", price: "260", image: "p6.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        7: { title: "Cherry Blossoms Card", price: "300", image: "p7.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        8: { title: "Lavender Greeting Card", price: "300", image: "p8.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" }
+    };
+
+    var product = products[productId];
+
+    if (product) {
+        document.querySelector(".product-title").textContent = product.title;
+        document.querySelector(".product-price").textContent = "Rs " + product.price;
+        document.querySelector(".product-category").textContent = product.category;
+        document.querySelector(".main-image").src = product.image;
+        document.querySelector(".Category").append(product.category);
+        document.querySelector(".Type").append(product.type);
+        document.querySelector(".Size").append(product.size);
+        document.querySelector(".Material").append(product.material);
+    }
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var smallImages = document.querySelectorAll(".small-image");
+        var mainImage = document.querySelector(".main-image");
+
+        for (var i = 0; i < smallImages.length; i++) {
+            smallImages[i].onclick = function () {
+                mainImage.src = this.src;
+            };
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const openContent = document.querySelector('.expandable-content.open');
-            if (openContent) {
-                 const icon = openContent.previousElementSibling.querySelector('.expand-icon svg');
-                 icon.style.transform = 'rotate(180deg)';
-            }
-        });
-
-        // PRODUCT DETILS JS
-        const params = new URLSearchParams(window.location.search);
-        const productId = params.get('id');
-
-
-        const products = {
-            1: {
-                title: "Torquise Eid Card",
-                price: "300",
-                image: "p1.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            },
-            2: {
-                title: "Mushroo Theme Tags Pack of 7",
-                price: "210",
-                image: "p2.jpeg",
-                category: "Tags",
-                type: "Physical",
-                size: "3 inches x 4 inches",
-                material: "Hard chart and papers"
-            },
-            3: {
-                title: "Chemistry Theme Birthday Card",
-                price: "300",
-                image: "p3.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            },
-            4: {
-                title: "Purple Eid Card",
-                price: "300",
-                image: "p4.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            },
-            5: {
-                title: "Mini Yellow Spring Album",
-                price: "600",
-                image: "p5.jpeg",
-                category: "Albums",
-                type: "Physical",
-                size: "4 inches x 6 inches",
-                material: "Hard chart and pattern paper"
-            },
-            6: {
-                title: "Watercolor srtips Birthday Card",
-                price: "260",
-                image: "p6.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            },
-            7:{
-                title: "Cherry Blossoms Card",
-                price: "300",
-                image: "p7.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            },
-            8: {
-                title: "Lavender Greeting Card",
-                price: "300",
-                image: "p8.jpeg",
-                category: "Greeting Card",
-                type: "Physical",
-                size: "6 inches x 12 inches",
-                material: "Hard chart"
-            }
-        };
-
-
-        const product = products[productId];
-
-        if (product) {
-            document.querySelector('.product-title').textContent = product.title;
-            document.querySelector('.product-price').textContent = "Rs " + product.price;
-            document.querySelector('.product-category').textContent = product.category;
-            document.querySelector('.main-image').src = product.image;
-            document.querySelector('.Category').append(product.category);
-            document.querySelector('.Type').append(product.type);
-            document.querySelector('.Size').append(product.size);
-            document.querySelector('.Material').append(product.material);
-
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const smallImages = document.querySelectorAll(".small-image");
-        const mainImage = document.querySelector(".main-image");
-
-        smallImages.forEach((simage) => {
-        simage.addEventListener("click", () => {
-            mainImage.src = simage.src;
-        });
-        });
-
     });
 
-        // ADD TO CART BTN JS
-        const addToCartBtn = document.getElementById('add-to-cart');
-        addToCartBtn.onclick = function(){
-            addToCartBtn.textContent = "Added to Cart";
-            addToCartBtn.disable = true;
+
+
+    // ADD TO CART STORAGE
+    function addToCart(product) {
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+        var found = false;
+
+        for (var i = 0; i < cart.length; i++) {
+            if (cart[i].id === product.id) {
+                cart[i].qty += product.qty;
+                found = true;
+                break;
+            }
+        }
+
+        if (found === false) {
+            cart.push(product);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+
+
+    //ADD TO CART BUTTON 
+    var addBtn = document.getElementById("add-to-cart");
+
+    addBtn.onclick = function () {
+        var qty = parseInt(document.querySelector(".qty-selector input").value);
+
+        var productData = {
+            id: productId,
+            title: product.title,
+            price: Number(product.price),
+            image: product.image,
+            qty: qty
         };
 
-    </script>
+        addToCart(productData);
+
+        addBtn.textContent = "Added!";
+        addBtn.disabled = true;
+    };
+
+</script>
+
 </body>
 </html>
