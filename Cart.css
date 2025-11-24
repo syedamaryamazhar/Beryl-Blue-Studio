@@ -24,6 +24,7 @@ body{
     margin: 0px auto;
     padding:0 auto;
 }
+
 .header {
             padding-top: 30px;
         }
@@ -140,30 +141,8 @@ main.cart-section {
 
 }
 
-.top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   margin-bottom: 20px;
-}
 
-.top label{
-    font-weight: 500;
-}
 
-button:hover{
-    background-color: #A7C3C6;
-
-}
-
-.deleteAll{
-    background-color: #1A4359;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .cart-item{
     display: flex;
@@ -331,7 +310,6 @@ button:hover{
         justify-content: center;
         align-items: center;
         gap: 25px;
-        /* width: 100vw; */
     }
 
     .search-icon{
@@ -446,7 +424,6 @@ button:hover{
   }
 
 .footer-nav{
-        /* width: 100vw; */
         gap: 15px;
         margin-bottom: 0px;
     }

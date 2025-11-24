@@ -74,17 +74,15 @@
                 </div>
 
                 <div class="order-detail">
-                    <p>Subtotal <span>Rs 3300</span></p>
-                    <p>Discount <span>-Rs 100</span></p>
-                    <p>Shipping Fee<span>Rs 300</span></p>
-                    <hr>
-                    <p class="total">Total Amount<span>Rs 3500</span></p>
+                   
                 </div>
                 <button class="Checkout" onclick="Page()"> Checkout</button>
             
              </div>
            </div>
+
         </main>
+        
           <footer class="footer">
         <div class="container">
             <div class="footer-nav">
@@ -106,9 +104,8 @@
             </div>
         </div>
     </footer>
+
 <script>
-
-
     function loadCart() {
         var cart = JSON.parse(localStorage.getItem("cart")) || [];
         var container = document.getElementById("cart-items");
@@ -182,21 +179,8 @@ function decreaseQty(id) {
 
 
 
+ 
 
-function deleteItem(id) {
-    var cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    var updatedCart = [];
-
-    for (var i = 0; i < cart.length; i++) {
-        if (cart[i].id !== id) {
-            updatedCart.push(cart[i]);
-        }
-    }
-
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    loadCart();
-}
 
 
 
