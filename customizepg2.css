@@ -105,7 +105,7 @@
             display: flex;
             justify-content: space-between;
             width: 100vw;
-            position: relative;
+            /* position: relative; */
         }
         
         .progress-bar::before {
@@ -114,10 +114,8 @@
             width: 920px;
             height: 1px;
             margin-left: 110px;
-            background-color: black;
-            top: 20%;
-            transform: translateY(-50%);
-            z-index: -1;
+            background-color: #999;
+            top: 18%;
         }
 
         .step {
@@ -156,8 +154,6 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .form-box {
@@ -168,7 +164,6 @@
         }
 
         form label {
-            display: block;
             margin-bottom: 5px;
             font-size: 15px;
             font-weight: 500;
@@ -210,7 +205,6 @@
             border-radius: 50%;
             margin-right: 8px;
             cursor: pointer;
-            position: relative;
             background-color: white;
         }
 
@@ -229,7 +223,7 @@
         
         .summary-title {
             font-family: var(--font-playfairdisplay);
-            font-size: 1.3rem;
+            font-size: 19px;
             font-weight: 700;
             margin-top: 0;
             margin-bottom: 20px;
@@ -255,13 +249,15 @@
             border-radius: 8px;
             cursor: pointer;
             font-family: var(--font-playfairdisplay);
-            font-size: 1rem;
+            font-size: 16px;
             width: 100%;
             transition: background-color 0.2s;
             margin-top: 20px;
         }
 
-        .btn-next-step:hover { background-color: var(--Seondary); }
+        .btn-next-step:hover { background-color: var(--Seondary); 
+            color: var(--Primary);
+        }
 
         /* FOOTER */
         .footer {
@@ -367,7 +363,7 @@
 
     /* FOOTER */
     .footer-nav{
-        width: 100vw;
+        /* width: 100vw; */
         gap: 50px;
         margin-bottom: 0px;
     }
@@ -471,7 +467,7 @@
     }
     }
 
-    @media (min-width: 993px){
+    @media (993px <= width <= 1024px){
         .progress-bar::before {
         width: 70vw;
         margin-left: 82px;

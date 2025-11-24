@@ -98,14 +98,13 @@
             padding: 0 5%;
             margin-bottom: 70px;
         }
-
-
+     
         /* PROGRESS BAR STEPS*/
         .progress-bar {
             display: flex;
             justify-content: space-between;
             width: 100vw;
-            position: relative;
+            /* position: relative; */
         }
         
         .progress-bar::before {
@@ -114,10 +113,8 @@
             width: 920px;
             height: 1px;
             margin-left: 110px;
-            background-color: black;
-            top: 20%;
-            transform: translateY(-50%);
-            z-index: -1;
+            background-color: #999;
+            top: 18%;
         }
 
         .step {
@@ -139,7 +136,6 @@
             background-color: var(--Basecolor);
             border: none;
             margin-bottom: 10px;
-            transition: background-color 0.3s;
         }
 
         .step.active .step-dot {
@@ -154,7 +150,7 @@
 
         .typesoforder{
             font-family: var(--font-playfairdisplay);
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 600;
             text-align: center;
             margin-top: 40px;
@@ -207,13 +203,14 @@
             border-radius: 8px;
             cursor: pointer;
             font-family: var(--font-playfairdisplay);
-            font-size: 1rem;
+            font-size: 16px;
             margin: 0 auto;
             transition: background-color 0.2s;
         }
 
         .btn-proceed:hover {
             background-color: var(--Seondary);
+            color: var(--Primary);
         }
     
         /* FOOTER */
@@ -265,7 +262,7 @@
         }
 
         .customize-subtitle {
-            font-size: 12px;
+            font-size: px;
         }
 
 
@@ -291,6 +288,7 @@
         justify-content: center;
         align-items: center;
         gap: 150px;
+        /* width: 100vw; */
         padding: 0 20px;
     }
 
@@ -310,6 +308,8 @@
     }
 
     .nav-links {
+        /* flex-wrap: wrap; */
+        /* width: 100vw; */
         gap: 40px;
         padding: 10px;
         justify-content: center;
@@ -322,7 +322,7 @@
 
     /* FOOTER */
     .footer-nav{
-        width: 100vw;
+        /* width: 100vw; */
         gap: 50px;
         margin-bottom: 0px;
     }
@@ -423,7 +423,7 @@
     }
     }
 
-    @media (min-width: 993px){
+    @media (993px <= width <= 1024px){
         .progress-bar::before {
         width: 70vw;
         margin-left: 82px;

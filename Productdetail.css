@@ -144,7 +144,7 @@
         .qty-row p {
             font-family: var(--font-poppins);
             margin-right: 15px; 
-            font-size: 0.9rem;
+            font-size: 15px;
         }
         .qty-selector {
             display: flex;
@@ -183,7 +183,9 @@
             width: 100%;
             transition: background-color 0.2s;
         }
-        .btn-add-to-cart:hover { background-color: var(--Seondary); }
+        .btn-add-to-cart:hover { background-color: var(--Seondary); 
+            color: var(--Primary);
+        }
 
         .btn-customize-product {
             background-color: var(--CTA);
@@ -230,15 +232,6 @@
 
 
         /* FEATURED SECTIONS  */
-        .image{
-            width: 100%;
-            aspect-ratio: 1 / 1; 
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: none;
-            margin-bottom: 12px;
-        }
-
         .products-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -319,36 +312,6 @@
             color: var(--Primary);
             margin-top: 0px;
         }
-
-
-      /* --- RESPONSIVENESS (Media Queries) --- */
-        /* @media (min-width: 768px) {
-            .logo { font-size: 2.5rem; } */
-            
-            /* Two column layout for product details on tablet/desktop */
-            /* .product-detail-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .product-images {
-                flex-direction: row;
-            }
-            .thumbnail-gallery { */
-                /* display: flex; Show thumbnails */
-                /* flex-direction: column;
-            } */
-            
-            /* 3 products per row on tablet, 4 on desktop */
-            /* .products-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (min-width: 1024px) {
-            .products-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        } */
-
 
        /* RESPONSIVENESS */
 

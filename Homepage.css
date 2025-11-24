@@ -136,7 +136,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);  /*4 columns 1fr each*/
             gap: 20px;
         }
         
@@ -195,7 +195,7 @@
 
         .footer-nav a {
             text-decoration: none;
-            color: inherit;
+            color: var(--Primary);
             display: flex;
             align-items: center;
         }
@@ -221,7 +221,6 @@
 
 
     .collection-grid {
-        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         margin-left: 5px;
         margin-right: 5px;
@@ -311,7 +310,6 @@
         margin-bottom: 20px;
     }
     .collection-grid {
-        grid-template-columns: repeat(3, 1fr);
         gap: 5px;
         margin-left: 2px;
         margin-right: 2px;

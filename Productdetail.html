@@ -52,8 +52,8 @@
                 <h2 class="product-title">TITLE OF PRODUCT</h2>
                 <p class="product-category">Greeting Card</p>
 
-                    <p class="product-price">Rs 200</p>
-                    <span class="sale-tag">ON SALE</span>
+                <p class="product-price">Rs 200</p>
+                <span class="sale-tag">ON SALE</span>
 
                 
                 <div class="qty-row">
@@ -72,7 +72,7 @@
                 <div class="expandable-section">
                     
                     <div>
-                        <div class="expand-title" onclick="toggleAccordion(this)">
+                        <div class="expand-title" onclick="expandTitle(this)">
                             Item Details
                             <img src="arrow.svg" width="16" height="16" class="expand-icon">
                         </div>
@@ -87,7 +87,7 @@
 
 
                     <div class="expandable-section">
-                        <div class="expand-title" onclick="toggleAccordion(this)">
+                        <div class="expand-title" onclick="expandTitle(this)">
                             Delivery
                             <img src="arrow.svg" width="16" height="16" class="expand-icon">
                         </div>
@@ -100,7 +100,7 @@
 
 
                     <div class="expandable-section">
-                        <div class="expand-title" onclick="toggleAccordion(this)">
+                        <div class="expand-title" onclick="expandTitle(this)">
                             Return Policy
                             <img src="arrow.svg" width="16" height="16" class="expand-icon">
                         </div>
@@ -229,7 +229,7 @@
 
 
     /// EXPANDABLE DETAIL JS
-    function toggleAccordion(header) {
+    function expandTitle(header) {
         var content = header.nextElementSibling;
         var icon = header.querySelector(".expand-icon");
 

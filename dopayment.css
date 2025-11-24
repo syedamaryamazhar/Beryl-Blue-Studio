@@ -87,7 +87,7 @@
             display: flex;
             justify-content: space-between;
             width: 100vw;
-            position: relative;
+            /* position: relative; */
         }
         
         .progress-bar::before {
@@ -96,10 +96,8 @@
             width: 920px;
             height: 1px;
             margin-left: 110px;
-            background-color: black;
-            top: 20%;
-            transform: translateY(-50%);
-            z-index: -1;
+            background-color: #999;
+            top: 18%;
         }
 
         .step {
@@ -150,16 +148,15 @@
         
         .form-title {
             font-family: var(--font-playfairdisplay);
-            font-size: 1.1rem;
+            font-size: 17px;
             font-weight: 600;
             margin-top: 0;
             margin-bottom: 25px;
         }
 
         form label {
-            display: block;
             margin-bottom: 7px;
-            font-size: 0.9rem;
+            font-size: 15px;
             font-weight: 500;
         }
 
@@ -172,7 +169,7 @@
             background-color: white;
             box-sizing: border-box;
             font-family: var(--font-poppins);
-            font-size: 0.9rem;
+            font-size: 15px;
             color: #333;
             margin-bottom: 7px;
         }
@@ -185,17 +182,19 @@
             border-radius: 8px;
             cursor: pointer;
             font-family: var(--font-playfairdisplay);
-            font-size: 1rem;
+            font-size: 16px;
             width: 100%;
             transition: background-color 0.2s;
             margin-top: 10px;
         }
 
-        .btn-next-step:hover { background-color: var(--Seondary); }
+        .btn-next-step:hover { background-color: var(--Seondary);
+            color: var(--Primary);
+        }
 
         .email-confirmation-text {
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 14px;
             color: #888;
             margin-top: 10px;
         }
@@ -209,7 +208,7 @@
         
         .summary-title {
             font-family: var(--font-playfairdisplay);
-            font-size: 1.1rem;
+            font-size: 17px;
             font-weight: 600;
             margin-top: 0;
             margin-bottom: 25px;
@@ -332,7 +331,7 @@
 
     /* FOOTER */
     .footer-nav{
-        width: 100vw;
+        /* width: 100vw; */
         gap: 50px;
         margin-bottom: 0px;
     }
@@ -436,7 +435,7 @@
     }
     }
 
-    @media (min-width: 993px){
+    @media (993px <= width <= 1024px){
         .progress-bar::before {
         width: 70vw;
         margin-left: 82px;

@@ -72,7 +72,7 @@
             color: var(--Primary);
         }
 
-        /* --- SHOP BY CATEGORY BARS --- */
+        /*SHOP BY CATEGORY BARS */
 
         .box-groups {
             display: flex;
@@ -97,7 +97,7 @@
             border-radius: 10px;
             cursor: pointer;
             font-size: 16px;
-            transition: all 0.2s;
+            transition: background-color 0.2s;
         }
 
         .box-btn:hover {
@@ -106,22 +106,6 @@
         
 
         /* ALL PRODUCTS */
-        .products-header {
-            position: relative;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-
-        .image{
-            width: 100%;
-            /* aspect-ratio: 1 / 1;  */
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: none;
-            margin-bottom: 12px;
-        }
-
         .products-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -222,7 +206,7 @@
             border-radius: 50%;
             font-family: var(--font-poppins);
             text-decoration: none;
-            background-color: #1A4359;
+            background-color: var(--Primary);
             color: white;
             border: none;
             transition: all 0.2s;
@@ -230,7 +214,7 @@
 
         .page-number.active {
             background-color: var(--Seondary);
-            color: black;
+            color: var(--Primary);
         
         }
         
