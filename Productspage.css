@@ -124,6 +124,11 @@
             border-radius: 8px;
             box-shadow: none; 
             margin-bottom: 5px;
+            transition: transform 0.15s ease-out;
+        }
+
+        .product-image:hover{
+            transform: scale(1.03);
         }
 
         .product-details {

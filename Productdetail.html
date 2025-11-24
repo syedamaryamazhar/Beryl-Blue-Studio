@@ -41,8 +41,8 @@
             <div class="detail-left">
                 <div class="product-images">
                     <div class="small-image-gallery">
-                        <img src="p1.jpeg" class="small-image">
-                        <img src="p2.jpeg" class="small-image">
+                        <img src="p1.jpeg" class="small-image1">
+                        <img src="p2.jpeg" class="small-image2">
                     </div>
                     <img src="p3.jpeg" class="main-image">
                 </div>
@@ -167,7 +167,7 @@
             </a>
 
             <a href="Productdetail.html?id=6" class="product-box">
-                <img src="p6.jpeg" class="product-image">
+                <img src="bookmark.jpeg" class="product-image">
                 <div class="product-details">
                     <p class="product-name">Watercolor strips Birthday Card</p>
                     <img src="Bag icon.svg" class="icon-bag">
@@ -249,14 +249,14 @@
     var productId = params.get("id");
 
     var products = {
-        1: { title: "Torquise Eid Card", price: "300", image: "p1.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
-        2: { title: "Mushroom Tags Pack of 7", price: "210", image: "p2.jpeg", category: "Tags", type: "Physical", size: "3 x 4", material: "Hard chart" },
-        3: { title: "Chemistry Theme Birthday Card", price: "300", image: "p3.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
-        4: { title: "Purple Eid Card", price: "300", image: "p4.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
-        5: { title: "Mini Yellow Spring Album", price: "600", image: "p5.jpeg", category: "Album", type: "Physical", size: "4 x 6", material: "Hard chart" },
-        6: { title: "Watercolor Strips Card", price: "260", image: "p6.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
-        7: { title: "Cherry Blossoms Card", price: "300", image: "p7.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
-        8: { title: "Lavender Greeting Card", price: "300", image: "p8.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" }
+        1: { title: "Torquise Eid Card", price: "300", image: "p1.jpeg",smimage: "eidtorquise2.jpeg",smimage2: "p1.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        2: { title: "Mushroom Tags Pack of 7", price: "210", image: "p2.jpeg",smimage: "tag1.jpeg",smimage2: "tag2.jpeg", category: "Tags", type: "Physical", size: "3 x 4", material: "Hard chart" },
+        3: { title: "Chemistry Theme Birthday Card", price: "300", image: "p3.jpeg",smimage: "p3.jpeg",smimage2: "p3.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        4: { title: "Purple Eid Card", price: "300", image: "p4.jpeg",smimage: "p4.jpeg",smimage2: "p4.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        5: { title: "Mini Yellow Spring Album", price: "600", image: "p5.jpeg",smimage: "al1.jpeg",smimage2: "al2.jpeg", category: "Album", type: "Physical", size: "4 x 6", material: "Hard chart" },
+        6: { title: "Flowers bookmarks Set of 3", price: "250", image: "bookmark.jpeg",smimage: "bookmark1.jpeg",smimage2: "bookmark2.jpeg", category: "Bookmark", type: "Physical", size: "2 x 6", material: "Hard chart" },
+        7: { title: "Cherry Blossoms Card", price: "300", image: "p7.jpeg",smimage: "cherry1.jpeg",smimage2: "cherry2.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" },
+        8: { title: "Lavender Greeting Card", price: "300", image: "p8.jpeg",smimage: "p8.jpeg",smimage2: "p8.jpeg", category: "Greeting Card", type: "Physical", size: "6 x 12", material: "Hard chart" }
     };
 
     var product = products[productId];
@@ -266,6 +266,8 @@
         document.querySelector(".product-price").textContent = "Rs " + product.price;
         document.querySelector(".product-category").textContent = product.category;
         document.querySelector(".main-image").src = product.image;
+        document.querySelector(".small-image1").src = product.smimage;
+        document.querySelector(".small-image2").src = product.smimage2;
         document.querySelector(".Category").append(product.category);
         document.querySelector(".Type").append(product.type);
         document.querySelector(".Size").append(product.size);
@@ -275,7 +277,7 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-        var smallImages = document.querySelectorAll(".small-image");
+        var smallImages = document.querySelectorAll(".small-image1, .small-image2");
         var mainImage = document.querySelector(".main-image");
 
         for (var i = 0; i < smallImages.length; i++) {
