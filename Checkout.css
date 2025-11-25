@@ -301,7 +301,6 @@ body{
         justify-content: center;
         align-items: center;
         gap: 25px;
-        /* width: 100vw; */
     }
 
     .search-icon{
@@ -321,7 +320,6 @@ body{
 
     .nav-links {
         flex-wrap: wrap;
-        /* width: 100vw; */
         gap: 15px;
         font-size: 8px;
         padding: 10px;
